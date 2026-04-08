@@ -1,0 +1,57 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}About | Jeremiah Emrich{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-6">
+                <h1 class="fw-bold mb-4">About Me</h1>
+                <p class="lead">I'm a full-stack developer specializing in Django, with a focus on building real deployed applications that solve real problems.</p>
+                <p>I'm currently pursuing a Computer Science degree at the <strong>University of Maryland Global Campus</strong>, while simultaneously building projects and taking on freelance work through <strong>Upwork</strong>.</p>
+                <p>I'm self-taught through <strong>Codecademy</strong>, where I've completed courses in Python, Django, JavaScript, SQL, HTML, Flask, and more — all at 100% completion.</p>
+                <p>My four live projects — WeatherRack, Archery Answers, Budget react app and GolfBros — are all fully deployed and represent real use cases I care about.</p>
+
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3">Education</h5>
+                    {% for edu in education %}
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <i class="bi bi-mortarboard-fill text-success fs-4"></i>
+                        <div>
+                            <p class="fw-bold mb-0">{{ edu.degree }}</p>
+                            <p class="text-muted mb-0">{{ edu.school }}</p>
+                            <small class="text-muted">{{ edu.details }}</small>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3">Freelance</h5>
+                    <div class="d-flex gap-3">
+                       
+                        <a href="https://www.upwork.com/freelancers/~0126a8d09c60c36a6b?viewMode=1" target="_blank" class="btn btn-outline-success">
+                            <i class="bi bi-briefcase"></i> Upwork
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Skills</h2>
+                {% for category, skill_list in skills.items %}
+                <h6 class="text-success text-uppercase fw-bold mb-2">{{ category }}</h6>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    {% for skill in skill_list %}
+                        <span class="badge bg-dark fs-6 px-3 py-2">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
