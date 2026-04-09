@@ -50,6 +50,15 @@ PROJECTS = [
         'category': 'AI / Full Stack',
         'image': 'portfolio_app/images/ai.jpg',
     },
+    {
+    'title': 'Job Application Assistant',
+    'description': 'An AI-powered RAG application that analyzes your resume against job descriptions, scores your match, identifies skill gaps, generates tailored cover letters, and recommends the best developer roles for your current skillset.',
+    'tech': ['Django', 'OpenAI', 'RAG', 'pdfplumber', 'Python', 'Railway'],
+    'live_url': 'https://web-production-83e8d.up.railway.app',
+    'github_url': 'https://github.com/jemrich18/rag_application_assistant',
+    'category': 'AI / Full Stack',
+    'image': 'portfolio_app/images/rag.jpg',
+    },
 ]
 
 SKILLS = {
