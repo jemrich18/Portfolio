@@ -36,7 +36,7 @@ PROJECTS = [
         'title': 'Budget App',
         'description': 'A full-stack budget tracking platform that allows users to categorize and track expenses and incomes.',
         'tech': ['Django REST Framework', 'React', 'PostgreSQL', 'Railway'],
-        'live_url': 'budgetappreactdrf-production.up.railway.app',
+        'live_url': 'https://budgetappreactdrf-production.up.railway.app',
         'github_url': 'https://github.com/jemrich18/budget_app_react_drf',
         'category': 'Full Stack',
         'image': 'portfolio_app/images/budget.jpg',
