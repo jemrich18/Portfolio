@@ -54,7 +54,7 @@ PROJECTS = [
     'title': 'Job Application Assistant',
     'description': 'An AI-powered RAG application that analyzes your resume against job descriptions, scores your match, identifies skill gaps, generates tailored cover letters, and recommends the best developer roles for your current skillset.',
     'tech': ['Django', 'OpenAI', 'RAG', 'pdfplumber', 'Python', 'Railway'],
-    'live_url': 'https://web-production-83e8d.up.railway.app',
+    'live_url': 'https://www.fitformyrole.com',
     'github_url': 'https://github.com/jemrich18/rag_application_assistant',
     'category': 'AI / Full Stack',
     'image': 'portfolio_app/images/rag.jpg',
@@ -110,15 +110,21 @@ def contact(request):
         subject = request.POST.get('subject')
         body = request.POST.get('body')
         if name and email and subject and body:
-            send_mail(
-                subject=f'Portfolio Contact: {subject}',
-                message=f'From: {name}\nEmail: {email}\n\nMessage:\n{body}',
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_EMAIL],
-                fail_silently=False,
-            )
-            messages.success(request, 'Message sent! I will get back to you soon.')
-            return redirect('contact')
+            if not settings.CONTACT_EMAIL:
+                messages.error(request, 'Contact form is not configured. Please try again later.')
+                return render(request, 'portfolio_app/contact.html')
+            try:
+                send_mail(
+                    subject=f'Portfolio Contact: {subject}',
+                    message=f'From: {name}\nEmail: {email}\n\nMessage:\n{body}',
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[settings.CONTACT_EMAIL],
+                    fail_silently=False,
+                )
+                messages.success(request, 'Message sent! I will get back to you soon.')
+                return redirect('contact')
+            except Exception:
+                messages.error(request, 'Failed to send message. Please try again later.')
         else:
             messages.error(request, 'Please fill in all fields.')
     return render(request, 'portfolio_app/contact.html')
