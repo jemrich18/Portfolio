@@ -45,7 +45,7 @@ PROJECTS = [
         'title': 'Hunting AI Assistant',
         'description': 'An AI-powered hunting assistant built with Django, LangGraph, and OpenAI GPT-4o-mini. Uses a structured knowledge base to answer questions about OTC tag availability by state, bow tuning fixes, rut phases, kinetic energy requirements, and preference point systems.',
         'tech': ['Django', 'LangGraph', 'LangChain', 'OpenAI', 'DRF', 'Railway'],
-        'live_url': 'https://web-production-d654e.up.railway.app',
+        'live_url': 'https://www.aihuntingchat.com',
         'github_url': 'https://github.com/jemrich18/Ai_agent',
         'category': 'AI / Full Stack',
         'image': 'portfolio_app/images/ai.jpg',
