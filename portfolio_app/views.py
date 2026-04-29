@@ -7,16 +7,16 @@ from django.conf import settings
 PROJECTS = [
     {
         'title': 'WeatherRack',
-        'description': 'A Django web app that analyzes 10-day weather forecasts to score and rank the best days to hunt based on conditions that drive deer movement. Features location management, moon data, and a responsive dark UI.',
+        'description': 'A Django web app that scores 10-day weather forecasts against the variables that actually drive deer movement — wind, pressure, temperature swing, and moon phase. Returns a ranked list of your best hunting days so you stop guessing. Features location management and a responsive dark UI.',
         'tech': ['Django', 'Python', 'Railway'],
-        'live_url': 'https://www.weatherrack.com',
+        'live_url': 'https://www.theweatherrack.com',
         'github_url': 'https://github.com/jemrich18',
         'category': 'Full Stack',
         'image': 'portfolio_app/images/weatherrack.jpg',
     },
     {
         'title': 'Archery Answers',
-        'description': 'A bowhunting ballistics platform that calculates real-world arrow speed, kinetic energy, and momentum to help archers build the perfect hunting setup.',
+        'description': 'A domain-specific ballistics calculator for archers. Configure your arrow components — shaft, point, fletching — and get real-world speed, kinetic energy, and momentum results. Users save and compare custom builds. Built for a real community that cares about precision.',
         'tech': ['Django', 'PostgreSQL', 'Python', 'Railway'],
         'live_url': 'https://archeryanswers-production.up.railway.app',
         'github_url': 'https://github.com/jemrich18',
@@ -25,7 +25,7 @@ PROJECTS = [
     },
     {
         'title': 'GolfBros',
-        'description': 'A full-stack blog platform for golfers to share round reviews and course conditions, built with Django REST Framework and React.',
+        'description': 'A full-stack golf community platform where players log rounds, share course reviews, and track performance over time. Built with Django REST Framework, React, and PostgreSQL. Features user authentication, full CRUD, and a clean responsive UI.',
         'tech': ['Django REST Framework', 'React', 'PostgreSQL', 'Railway'],
         'live_url': 'https://www.golfbros.org',
         'github_url': 'https://github.com/jemrich18',
@@ -34,7 +34,7 @@ PROJECTS = [
     },
     {
         'title': 'Budget App',
-        'description': 'A full-stack budget tracking platform that allows users to categorize and track expenses and incomes.',
+        'description': 'A full-stack personal finance tracker with a Django REST Framework backend and React frontend. Features token authentication, category management, full CRUD, and expense visualization with chart breakdowns. Deployed on Railway.',
         'tech': ['Django REST Framework', 'React', 'PostgreSQL', 'Railway'],
         'live_url': 'https://budgetappreactdrf-production.up.railway.app',
         'github_url': 'https://github.com/jemrich18/budget_app_react_drf',
@@ -43,7 +43,7 @@ PROJECTS = [
     },
     {
         'title': 'Hunting AI Assistant',
-        'description': 'An AI-powered hunting assistant built with Django, LangGraph, and OpenAI GPT-4o-mini. Uses a structured knowledge base to answer questions about OTC tag availability by state, bow tuning fixes, rut phases, kinetic energy requirements, and preference point systems.',
+        'description': 'A domain-specific AI agent for hunters built with LangGraph and Django. Routes complex queries through a structured knowledge base using a multi-node state graph — covering OTC tags by state, rut timing, bow tuning, kinetic energy, and wildlife regulations. Engineered specifically to prevent hallucination on regulation-sensitive topics.',
         'tech': ['Django', 'LangGraph', 'LangChain', 'OpenAI', 'DRF', 'Railway'],
         'live_url': 'https://www.aihuntingchat.com',
         'github_url': 'https://github.com/jemrich18/Ai_agent',
@@ -52,7 +52,7 @@ PROJECTS = [
     },
     {
     'title': 'Job Application Assistant',
-    'description': 'An AI-powered RAG application that analyzes your resume against job descriptions, scores your match, identifies skill gaps, generates tailored cover letters, and recommends the best developer roles for your current skillset.',
+    'description': 'Built for developers in job search mode. Upload your resume and a job posting — the app scores your match percentage, surfaces your exact skill gaps, and generates a tailored cover letter. Built on a full RAG pipeline: PDF parsing, vector embedding, retrieval, and GPT-4o-mini completion with structured output.',
     'tech': ['Django', 'OpenAI', 'RAG', 'pdfplumber', 'Python', 'Railway'],
     'live_url': 'https://www.fitformyrole.com',
     'github_url': 'https://github.com/jemrich18/rag_application_assistant',
