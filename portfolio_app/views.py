@@ -59,6 +59,24 @@ PROJECTS = [
     'category': 'AI / Full Stack',
     'image': 'portfolio_app/images/rag.jpg',
     },
+    {
+    'title': 'FAA Aviation Incident Dashboard',
+    'description': 'An interactive data analysis dashboard exploring 25 years of US aviation incident data from the NTSB database. Features dynamic filters, KPI metrics, trend analysis, aircraft make breakdowns, and a US choropleth map. Built by an FAA certified A&P mechanic who understands what these records represent beyond the data.',
+    'tech': ['Python', 'Pandas', 'Plotly', 'Streamlit', 'NTSB Data'],
+    'live_url': 'https://faa-aviation-dashboard-ceua43sscr4dsjxyvisprs.streamlit.app/',
+    'github_url': 'https://github.com/jemrich18/faa-aviation-dashboard',
+    'category': 'Data Analysis',
+    'image': 'portfolio_app/images/faa.jpg',
+    },
+    {
+    'title': 'Personal Finance Dashboard',
+    'description': 'An end-to-end personal finance analysis dashboard covering 1,500 transactions across 5 years. Features income vs expense tracking, spending by category, monthly trend analysis, day of week breakdown, and a 6 month Linear Regression forecast. Full data pipeline from raw data through SQL analysis to interactive deployment.',
+    'tech': ['Python', 'Pandas', 'Plotly', 'Streamlit', 'Scikit-learn'],
+    'live_url': 'https://end-to-end-finance-data-analysis-4qjvmptdvwcv5mcrfkydze.streamlit.app/',
+    'github_url': 'https://github.com/jemrich18/end-to-end-finance-data-analysis',
+    'category': 'Data Analysis',
+    'image': 'portfolio_app/images/endtoend.jpg',
+    },
 ]
 
 SKILLS = {
@@ -68,6 +86,7 @@ SKILLS = {
     'Tools & DevOps': ['Railway', 'Git', 'GitHub', 'VS Code', 'Docker'],
     'AI / ML': ['LangChain', 'LangGraph', 'OpenAI API', 'Streamlit'],
     'Languages': ['Python', 'JavaScript', 'Java', 'SQL'],
+    'Data Analysis': ['Pandas', 'NumPy', 'Plotly', 'Streamlit', 'Scikit-learn', 'Linear Regression'],
 }
 
 EDUCATION = [

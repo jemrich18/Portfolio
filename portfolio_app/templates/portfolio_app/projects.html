@@ -8,35 +8,128 @@
     <div class="container">
         <h1 class="fw-bold mb-2">My Projects</h1>
         <p class="text-muted mb-5">Real applications — built, deployed, and live.</p>
-        <div class="row g-4">
-            {% for project in projects %}
-            <div class="col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="{% static project.image %}" alt="{{ project.title }}" style="height:220px; width:100%; object-fit:cover;">
-                    <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h4 class="card-title fw-bold mb-0">{{ project.title }}</h4>
-                            <span class="badge bg-success">{{ project.category }}</span>
-                        </div>
-                        <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
-                        <div class="mb-3">
-                            {% for tech in project.tech %}
-                                <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>
-                            {% endfor %}
-                        </div>
-                        <div class="d-flex gap-2">
-                            <a href="{{ project.live_url }}" target="_blank" class="btn btn-success">
-                                <i class="bi bi-box-arrow-up-right"></i> Live Site
-                            </a>
-                            <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark">
-                                <i class="bi bi-github"></i> View Code
-                            </a>
+
+        <!-- AI ENGINEERING -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <span class="fs-4 me-2">🤖</span>
+                <h2 class="fw-bold mb-0">AI Engineering</h2>
+            </div>
+            <div class="row g-4">
+                {% for project in projects %}
+                {% if project.category == 'AI / Full Stack' %}
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="{% static project.image %}" alt="{{ project.title }}" style="height:220px; width:100%; object-fit:cover;">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">{{ project.title }}</h4>
+                                <span class="badge bg-primary">AI</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
+                            <div class="mb-3">
+                                {% for tech in project.tech %}
+                                    <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="{{ project.live_url }}" target="_blank" class="btn btn-primary">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Site
+                                </a>
+                                <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark">
+                                    <i class="bi bi-github"></i> View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
+
+        <hr class="my-5">
+
+        <!-- FULL STACK -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <span class="fs-4 me-2">⚙️</span>
+                <h2 class="fw-bold mb-0">Full Stack</h2>
+            </div>
+            <div class="row g-4">
+                {% for project in projects %}
+                {% if project.category == 'Full Stack' %}
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="{% static project.image %}" alt="{{ project.title }}" style="height:220px; width:100%; object-fit:cover;">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">{{ project.title }}</h4>
+                                <span class="badge bg-success">Full Stack</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
+                            <div class="mb-3">
+                                {% for tech in project.tech %}
+                                    <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="{{ project.live_url }}" target="_blank" class="btn btn-success">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Site
+                                </a>
+                                <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark">
+                                    <i class="bi bi-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- DATA ANALYSIS -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <span class="fs-4 me-2">📊</span>
+                <h2 class="fw-bold mb-0">Data Analysis</h2>
+            </div>
+            <div class="row g-4">
+                {% for project in projects %}
+                {% if project.category == 'Data Analysis' %}
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="{% static project.image %}" alt="{{ project.title }}" style="height:220px; width:100%; object-fit:cover;">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">{{ project.title }}</h4>
+                                <span class="badge bg-warning text-dark">Data</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
+                            <div class="mb-3">
+                                {% for tech in project.tech %}
+                                    <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="{{ project.live_url }}" target="_blank" class="btn btn-warning text-dark">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Site
+                                </a>
+                                <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark">
+                                    <i class="bi bi-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
     </div>
 </section>
 {% endblock %}
