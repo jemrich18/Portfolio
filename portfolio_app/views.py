@@ -87,6 +87,7 @@ SKILLS = {
     'AI / ML': ['LangChain', 'LangGraph', 'OpenAI API', 'Streamlit'],
     'Languages': ['Python', 'JavaScript', 'Java', 'SQL'],
     'Data Analysis': ['Pandas', 'NumPy', 'Plotly', 'Streamlit', 'Scikit-learn', 'Linear Regression'],
+    'Tools & DevOps': ['Railway', 'Git', 'GitHub', 'GitHub Actions', 'CI/CD', 'pytest', 'VS Code', 'Docker'],
 }
 
 EDUCATION = [
