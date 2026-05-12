@@ -1,17 +1,16 @@
 {% extends 'portfolio_app/base.html' %}
 {% load static %}
 
-
 {% block content %}
 
 <!-- HERO -->
 <section class="bg-dark text-white py-5">
     <div class="container py-5">
         <div class="col-lg-8">
-            <p class="text-success fw-bold mb-2">Hello, I'm</p>
+            <p class="text-success fw-bold mb-2">Available for Remote Work</p>
             <h1 class="display-3 fw-bold mb-3">Jeremiah Emrich</h1>
-            <h2 class="h4 text-muted mb-4">Full-Stack Django Developer & CS Student</h2>
-            <p class="lead mb-4">I build real, deployed web applications using Django, PostgreSQL, and React. Currently studying Computer Science at UMGC while freelancing on Upwork.</p>
+            <h2 class="h4 text-muted mb-4">Python Developer · AI/LLM Applications · Full-Stack Django</h2>
+            <p class="lead mb-4">I build and ship real AI-powered applications — LangGraph agents, RAG pipelines, full-stack Django backends. 11 deployed projects in 12 months, including two production AI apps and a live client site.</p>
             <div class="d-flex gap-3 flex-wrap">
                 <a href="{% url 'projects' %}" class="btn btn-success btn-lg">View My Work</a>
                 <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Hire Me</a>
@@ -27,16 +26,16 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-4">
-                <h3 class="fw-bold mb-0">9</h3>
-                <small>Live Projects</small>
+                <h3 class="fw-bold mb-0">11</h3>
+                <small>Deployed Projects</small>
+            </div>
+            <div class="col-4">
+                <h3 class="fw-bold mb-0">2</h3>
+                <small>Production AI Apps</small>
             </div>
             <div class="col-4">
                 <h3 class="fw-bold mb-0">1</h3>
-                <small>Year Building</small>
-            </div>
-            <div class="col-4">
-                <h3 class="fw-bold mb-0">100%</h3>
-                <small>Deployed & Live</small>
+                <small>Live Client Site</small>
             </div>
         </div>
     </div>
@@ -57,7 +56,7 @@
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title fw-bold mb-0">{{ project.title }}</h5>
-                            <span class="badge bg-success">{{ project.category }}</span>
+                            <span class="badge {% if project.category == 'AI / Full Stack' %}bg-primary{% elif project.category == 'Client Project' %}bg-danger{% else %}bg-success{% endif %}">{{ project.category }}</span>
                         </div>
                         <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
                         <div class="mb-3">
