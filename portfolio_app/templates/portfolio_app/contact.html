@@ -8,7 +8,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <h1 class="fw-bold mb-2">Get In Touch</h1>
-                <p class="text-muted mb-5">Have a role, a project, or a problem that needs a Python or AI developer? I'm actively looking for remote opportunities and respond quickly.</p>
+                <p class="text-muted mb-3">Looking to hire a developer, or need a website, app, or automation built? I take on full-time roles, contract work, and freelance projects — Python/Django, React/TypeScript, and AI-powered tools. Tell me what you're looking for below and I'll get back to you quickly.</p>
+                <p class="text-muted mb-5"><strong>Freelance work I take on:</strong> business websites, booking/scheduling systems, dashboards, and custom web apps. Available Monday–Thursday.</p>
 
                 <form method="POST">
                     {% csrf_token %}
@@ -22,11 +23,16 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold">Subject</label>
-                        <input type="text" name="subject" class="form-control form-control-lg" placeholder="Job opportunity / Project inquiry" required>
+                        <select name="subject" class="form-select form-select-lg" required>
+                            <option value="" selected disabled>What's this about?</option>
+                            <option value="Full-time opportunity">Full-time opportunity</option>
+                            <option value="Contract / freelance project">Contract / freelance project</option>
+                            <option value="Just want to connect">Just want to connect</option>
+                        </select>
                     </div>
                     <div class="mb-4">
                         <label class="form-label fw-bold">Message</label>
-                        <textarea name="body" class="form-control form-control-lg" rows="6" placeholder="Tell me about your opportunity or project..." required></textarea>
+                        <textarea name="body" class="form-control form-control-lg" rows="6" placeholder="Tell me about the role or project — what are you building, and what's your timeline (and budget, if you have one in mind)?" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-success btn-lg w-100">
                         <i class="bi bi-send"></i> Send Message
@@ -45,10 +51,6 @@
                         <a href="https://www.linkedin.com/in/jeremiah-e-064bb0391/" target="_blank" class="text-decoration-none text-dark">
                             <i class="bi bi-linkedin text-success"></i> LinkedIn Profile
                         </a>
-                        <a href="https://www.upwork.com/freelancers/~0126a8d09c60c36a6b?viewMode=1" target="_blank" class="text-decoration-none text-dark">
-                            <i class="bi bi-briefcase text-success"></i> Upwork Profile
-                        </a>
-                        
                     </div>
                 </div>
             </div>
