@@ -85,7 +85,7 @@ class ProjectDataTest(TestCase):
             self.assertIn('description', project)
             self.assertIn('tech', project)
             self.assertIn('live_url', project)
-            self.assertIn('category', project)
+            self.assertIn('highlight', project)
 
     def test_skills_have_categories(self):
         from portfolio_app.views import SKILLS
