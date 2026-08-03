@@ -7,10 +7,10 @@
 <section class="bg-dark text-white py-4 pb-3">
     <div class="container py-4">
         <div class="col-lg-8">
-            <p class="text-success fw-bold mb-2">Available for Remote Work & Freelance Projects</p>
+            <p class="text-success fw-bold mb-2">Available for Remote Work &amp; Freelance Projects</p>
             <h1 class="display-3 fw-bold mb-3">Jeremiah Emrich</h1>
-            <h2 class="h4 text-muted mb-4">Backend Developer — Python / Django</h2>
-            <p class="lead mb-4">I build and ship real backend systems — Django REST APIs, real-time architecture with Channels and WebSockets, and full-stack delivery from database to deployment. 11 deployed projects, including a live client booking platform and production AI/LLM integrations.</p>
+            <h2 class="h4 text-muted mb-4">Software Engineer — Python / Django</h2>
+            <p class="lead mb-4">I build REST APIs, real-time systems, and applied AI tooling with Python and Django — end to end, from schema design through deployment. Shipped a live client booking platform and a subscription-replacing SaaS product with authentication and billing.</p>
             <div class="d-flex gap-3 flex-wrap">
                 <a href="{% url 'projects' %}" class="btn btn-success btn-lg">View My Work</a>
                 <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Hire Me</a>
@@ -26,16 +26,16 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-4">
-                <h3 class="fw-bold mb-0">11</h3>
-                <small>Deployed Projects</small>
-            </div>
-            <div class="col-4">
-                <h3 class="fw-bold mb-0">2</h3>
-                <small>Production AI Apps</small>
-            </div>
-            <div class="col-4">
                 <h3 class="fw-bold mb-0">1</h3>
-                <small>Live Client Site</small>
+                <small>Live Client Platform</small>
+            </div>
+            <div class="col-4">
+                <h3 class="fw-bold mb-0">Real-Time</h3>
+                <small>Channels · WebSockets · Redis</small>
+            </div>
+            <div class="col-4">
+                <h3 class="fw-bold mb-0">RAG</h3>
+                <small>OpenAI API + Vector Search</small>
             </div>
         </div>
     </div>
@@ -44,29 +44,32 @@
 <!-- FEATURED PROJECTS -->
 <section class="py-5">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold">Featured Projects</h2>
-            <a href="{% url 'projects' %}" class="btn btn-outline-success">View All</a>
+        <div class="mb-4">
+            <h2 class="fw-bold">Featured Work</h2>
+            <p class="text-muted mb-0">Four builds, each solving a real problem.</p>
         </div>
         <div class="row g-4">
             {% for project in projects %}
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="{% static project.image %}" alt="{{ project.title }}" style="height:200px; width:100%; object-fit:cover;">
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title fw-bold mb-0">{{ project.title }}</h5>
-                            <span class="badge {% if project.category == 'AI / Full Stack' %}bg-primary{% elif project.category == 'Client Project' %}bg-danger{% else %}bg-success{% endif %}">{{ project.category }}</span>
+                            <span class="badge badge-flagship">Flagship</span>
                         </div>
                         <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
+                        <div class="status-line">{{ project.highlight }}</div>
                         <div class="mb-3">
                             {% for tech in project.tech %}
-                                <span class="badge bg-dark me-1">{{ tech }}</span>
+                                <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>
                             {% endfor %}
                         </div>
                         <div class="d-flex gap-2">
                             <a href="{{ project.live_url }}" target="_blank" class="btn btn-success btn-sm"><i class="bi bi-box-arrow-up-right"></i> Live Site</a>
+                            {% if project.github_url %}
                             <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark btn-sm"><i class="bi bi-github"></i> Code</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,77 @@
+/* Brand override — layer on top of Bootstrap, don't replace it */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --accent: #E8A33D;
+  --accent-dark: #171308;
+  --live: #5AAE7A;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.mono, .status-line, .badge.bg-dark {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Swap bootstrap green for the brand accent */
+.btn-success, .bg-success {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent-dark) !important;
+}
+.btn-success:hover {
+  opacity: 0.9;
+}
+.btn-outline-success {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+.btn-outline-success:hover {
+  background-color: var(--accent) !important;
+  color: var(--accent-dark) !important;
+}
+.text-success {
+  color: var(--accent) !important;
+}
+
+/* Status line — small systems-log style detail block on each project card */
+.status-line {
+  font-size: 0.78rem;
+  background: rgba(232, 163, 61, 0.07);
+  border: 1px solid rgba(232, 163, 61, 0.25);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  color: #6b7280;
+}
+.status-line .k {
+  color: var(--accent);
+  font-weight: 600;
+}
+.status-line .live {
+  color: var(--live);
+  font-weight: 600;
+}
+
+/* Slightly tighter, more deliberate card style */
+.card {
+  border-radius: 10px !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Unified badge for the four flagship projects — replaces old mismatched category colors */
+.badge-flagship {
+  background: rgba(232, 163, 61, 0.12) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(232, 163, 61, 0.35);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
