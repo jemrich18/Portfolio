@@ -27,7 +27,7 @@ PROJECTS = [
         'live_url': 'https://faa-aviation-dashboard-ceua43sscr4dsjxyvisprs.streamlit.app/',
         'github_url': 'https://github.com/jemrich18/faa-aviation-dashboard',
         'image': 'portfolio_app/images/faa_dashboard.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-airplane-engines-fill',
         'flagship': True,
     },
@@ -63,7 +63,7 @@ PROJECTS = [
         'live_url': 'https://www.golfbros.org',
         'github_url': 'https://github.com/jemrich18/Golf_bros_app',
         'image': 'portfolio_app/images/golfbros.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-golf',
     },
     {
@@ -74,7 +74,7 @@ PROJECTS = [
         'live_url': 'https://theweatherrack.com',
         'github_url': 'https://github.com/jemrich18/weather-rack',
         'image': 'portfolio_app/images/weatherrack.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-cloud-sun-fill',
     },
     {
@@ -85,7 +85,7 @@ PROJECTS = [
         'live_url': 'https://budgetappreactdrf-production.up.railway.app',
         'github_url': 'https://github.com/jemrich18/budget_app_react_drf',
         'image': 'portfolio_app/images/budgetapp.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-cash-coin',
     },
     {
@@ -118,7 +118,7 @@ PROJECTS = [
         'live_url': 'https://www.aihuntingchat.com',
         'github_url': 'https://github.com/jemrich18/Ai_agent',
         'image': 'portfolio_app/images/ai_agent.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-robot',
     },
 ]
