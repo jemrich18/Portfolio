@@ -9,8 +9,8 @@
         <div class="col-lg-8">
             <p class="text-success fw-bold mb-2">Available for Remote Work &amp; Freelance Projects</p>
             <h1 class="display-3 fw-bold mb-3">Jeremiah Emrich</h1>
-            <h2 class="h4 text-muted mb-4">Software Engineer — Python / Django</h2>
-            <p class="lead mb-4">I build REST APIs, real-time systems, and applied AI tooling with Python and Django — end to end, from schema design through deployment. Shipped a live client booking platform and a subscription-replacing SaaS product with authentication and billing.</p>
+            <h2 class="h4 text-muted mb-4">Backend Software Engineer — Python / Django</h2>
+            <p class="lead mb-4">I build REST APIs, real-time systems, and applied AI tooling with Python and Django — end to end, from schema design through deployment. Shipped a live client booking platform and {{ live_count }} other production applications spanning real-time architecture, RAG pipelines, and AI agents.</p>
             <div class="d-flex gap-3 flex-wrap">
                 <a href="{% url 'projects' %}" class="btn btn-success btn-lg">View My Work</a>
                 <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Hire Me</a>
@@ -26,16 +26,16 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-4">
-                <h3 class="fw-bold mb-0">1</h3>
-                <small>Live Client Platform</small>
+                <h3 class="fw-bold mb-0">{{ live_count }}</h3>
+                <small>Live Production Apps</small>
             </div>
             <div class="col-4">
                 <h3 class="fw-bold mb-0">Real-Time</h3>
                 <small>Channels · WebSockets · Redis</small>
             </div>
             <div class="col-4">
-                <h3 class="fw-bold mb-0">RAG</h3>
-                <small>OpenAI API + Vector Search</small>
+                <h3 class="fw-bold mb-0">AI / Agents</h3>
+                <small>RAG · LangGraph · Vector Search</small>
             </div>
         </div>
     </div>
@@ -46,20 +46,26 @@
     <div class="container">
         <div class="mb-4">
             <h2 class="fw-bold">Featured Work</h2>
-            <p class="text-muted mb-0">Four builds, each solving a real problem.</p>
+            <p class="text-muted mb-0">A sample of what I've shipped — see all {{ live_count }} live projects on the <a href="{% url 'projects' %}">Projects</a> page.</p>
         </div>
         <div class="row g-4">
             {% for project in projects %}
             <div class="col-md-6">
                 <div class="card h-100 border-0 shadow-sm">
+                    {% if project.has_image %}
                     <img src="{% static project.image %}" alt="{{ project.title }}" style="height:200px; width:100%; object-fit:cover;">
+                    {% else %}
+                    <div class="thumb-placeholder thumb-sm d-flex align-items-center justify-content-center">
+                        <i class="bi {{ project.icon }}"></i>
+                    </div>
+                    {% endif %}
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title fw-bold mb-0">{{ project.title }}</h5>
                             <span class="badge badge-flagship">Flagship</span>
                         </div>
                         <p class="card-text text-muted flex-grow-1">{{ project.description }}</p>
-                        <div class="status-line">{{ project.highlight }}</div>
+                        <div class="status-line"><span class="live">{{ project.highlight }}</span></div>
                         <div class="mb-3">
                             {% for tech in project.tech %}
                                 <span class="badge bg-dark me-1 mb-1">{{ tech }}</span>

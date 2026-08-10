@@ -6,6 +6,7 @@
   --accent: #E8A33D;
   --accent-dark: #171308;
   --live: #5AAE7A;
+  --dev: #8A8F98;
 }
 
 h1, h2, h3, .navbar-brand {
@@ -65,7 +66,7 @@ h1, h2, h3, .navbar-brand {
   transform: translateY(-2px);
 }
 
-/* Unified badge for the four flagship projects — replaces old mismatched category colors */
+/* Unified badge for flagship projects */
 .badge-flagship {
   background: rgba(232, 163, 61, 0.12) !important;
   color: var(--accent) !important;
@@ -74,4 +75,38 @@ h1, h2, h3, .navbar-brand {
   font-size: 0.72rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+/* Badge for in-development projects */
+.badge-dev {
+  background: rgba(138, 143, 152, 0.12) !important;
+  color: var(--dev) !important;
+  border: 1px solid rgba(138, 143, 152, 0.35);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Icon-based placeholder thumbnail for projects without a screenshot yet */
+.thumb-placeholder {
+  height: 220px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(232, 163, 61, 0.14), rgba(23, 19, 8, 0.06));
+  border-bottom: 1px solid rgba(232, 163, 61, 0.2);
+}
+.thumb-placeholder.thumb-sm {
+  height: 200px;
+}
+.thumb-placeholder.thumb-dev {
+  background: linear-gradient(135deg, rgba(138, 143, 152, 0.14), rgba(23, 19, 8, 0.04));
+  border-bottom: 1px solid rgba(138, 143, 152, 0.2);
+}
+.thumb-placeholder i {
+  font-size: 3.2rem;
+  color: var(--accent);
+  opacity: 0.85;
+}
+.thumb-placeholder.thumb-dev i {
+  color: var(--dev);
 }

@@ -1,4 +1,4 @@
-# Jeremiah Emrich — Backend Developer (Python / Django)
+# Jeremiah Emrich — Backend Software Engineer (Python / Django)
 
 A clean, fast developer portfolio built with Django showcasing my projects, skills, and background as a backend developer.
 
@@ -9,9 +9,9 @@ A clean, fast developer portfolio built with Django showcasing my projects, skil
 
 ## About
 
-Self-taught backend developer specializing in Python and Django, with 11 deployed production applications. Core strength in Django REST Framework, PostgreSQL, and real-time backend architecture using Django Channels, WebSockets, and Redis. Delivered a live client booking platform end-to-end and shipped production AI/LLM integrations as an additional area of depth.
+Self-taught backend developer specializing in Python and Django, with 10 deployed production applications. Core strength in Django REST Framework, PostgreSQL, and real-time backend architecture using Django Channels, WebSockets, and Redis. Delivered a live client booking platform end-to-end and shipped production AI/LLM integrations — a RAG pipeline and a LangGraph tool-calling agent — as an additional area of depth.
 
-Currently a CS student at the University of Maryland Global Campus. FAA-certified Airframe mechanic background adds discipline in safety-critical systems and precision documentation.
+Currently a CS student at the University of Maryland Global Campus. FAA-certified Airframe mechanic background adds discipline in safety-critical systems and precision documentation — put directly to use in the FAA Aviation Incident Analysis Dashboard below.
 
 This portfolio was built from scratch to showcase that work. It's intentionally simple and fast — no database required for content, everything is hardcoded for reliability and easy maintenance.
 
@@ -22,15 +22,15 @@ This portfolio was built from scratch to showcase that work. It's intentionally 
 | Project | Tech Stack | Live |
 |---|---|---|
 | Erin the Estie | Django, PostgreSQL, Railway | [erintheestie.com](https://erintheestie.com) |
-| Work Order Tracker *(in progress)* | Django, Channels, WebSockets, Redis, PostgreSQL | — |
-| OurCushion *(in progress)* | Django, Channels, WebSockets, PostgreSQL | [ourchushion.com](https://ourchushion.com) |
-| Budget App | Django REST Framework, React, PostgreSQL, Railway | — |
-| GolfBros | Django REST Framework, React, PostgreSQL | [golfbros.org](https://www.golfbros.org) |
-| WeatherRack | Django, Python, Railway | [theweatherrack.com](https://theweatherrack.com) |
-| FAA Aviation Incident Dashboard | Python, Pandas, Plotly, Streamlit | — |
-| Job Application Assistant (AI) | Django, LangChain, OpenAI, ChromaDB | [fitformyrole.com](https://fitformyrole.com) |
-| Hunting AI Assistant (AI Agent) | Django, LangGraph, LangChain, OpenAI | — |
-| Archery Answers | Django, PostgreSQL, Railway | [archeryanswers-production.up.railway.app](https://archeryanswers-production.up.railway.app) |
+| FAA Aviation Incident Dashboard | Python, Pandas, Plotly, Streamlit | [Live Demo](https://faa-aviation-dashboard-ceua43sscr4dsjxyvisprs.streamlit.app/) |
+| TrackMyHandicap | Django REST Framework, React, PostgreSQL, Stripe | [trackmyhandi.com](https://trackmyhandi.com) |
+| OurCushion | Django, Channels, WebSockets, Redis, PostgreSQL | [ourcushion.com](https://ourcushion.com) |
+| GolfBros | Django REST Framework, React, Vite, PostgreSQL | [golfbros.org](https://www.golfbros.org) |
+| WeatherRack | Django, Python, Open-Meteo, ephem, Railway | [theweatherrack.com](https://theweatherrack.com) |
+| Budget App | Django REST Framework, React, Recharts, Tailwind | [Live Demo](https://budgetappreactdrf-production.up.railway.app) |
+| Fit For My Role (AI) | Django, OpenAI API, ChromaDB, pdfplumber | [fitformyrole.com](https://fitformyrole.com) |
+| Archery Answers | Django, HTMX, PostgreSQL | [Live Demo](https://archeryanswers-production.up.railway.app) |
+| AI Hunting Chat | LangGraph, LangChain, OpenAI, Django REST Framework | [aihuntingchat.com](https://www.aihuntingchat.com) |
 
 ---
 
@@ -48,6 +48,11 @@ This portfolio was built from scratch to showcase that work. It's intentionally 
 - HTML5
 - Bootstrap 5
 - Bootstrap Icons
+
+**AI / LLM**
+- OpenAI API (GPT-4o-mini)
+- LangChain / LangGraph
+- ChromaDB, vector embeddings, RAG pipelines
 
 **Infrastructure**
 - Railway (hosting)
