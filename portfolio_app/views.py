@@ -140,9 +140,10 @@ PROJECTS_IN_PROGRESS = []
 
 SKILLS = {
     'Backend': ['Django', 'Django REST Framework', 'Python', 'Django Channels', 'WebSockets', 'Redis', 'REST API Design'],
+    'Data & Analysis': ['Pandas', 'NumPy', 'Streamlit', 'Plotly', 'Recharts', 'Statistical Analysis', 'Data Visualization', 'Scikit-learn'],
     'Frontend': ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
     'Database': ['PostgreSQL', 'SQLite', 'SQL'],
-    'Tools & DevOps': ['Railway', 'Docker', 'Git', 'GitHub Actions', 'CI/CD', 'pytest'],
+    'Tools & DevOps': ['Railway', 'Docker', 'Git', 'GitHub Actions', 'CI/CD', 'pytest', 'Jupyter Notebook'],
     'AI / LLM': ['OpenAI API', 'LangGraph', 'ChromaDB', 'RAG Pipelines', 'Vector Embeddings', 'Prompt Engineering'],
 }
 
