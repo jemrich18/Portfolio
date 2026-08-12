@@ -107,7 +107,7 @@ PROJECTS = [
         'live_url': 'https://archeryanswers-production.up.railway.app',
         'github_url': 'https://github.com/jemrich18/Archery_answers',
         'image': 'portfolio_app/images/archery.jpg',
-        'has_image': False,
+        'has_image': True,
         'icon': 'bi-bullseye',
     },
     {
