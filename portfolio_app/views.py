@@ -121,6 +121,17 @@ PROJECTS = [
         'has_image': True,
         'icon': 'bi-robot',
     },
+    {
+        'title': 'Personal Finance Analysis Dashboard',
+        'description': 'An end-to-end data analytics pipeline exploring 1,500 personal finance transactions across 5 years (2020\u20132024): synthetic data generation, data cleaning, SQL-based analysis in SQLite, interactive Plotly visualizations, and a 6-month linear regression forecast. Full workflow documented across 4 Jupyter notebooks covering cleaning, SQL queries, visualization, and forecasting, with dynamic KPI filtering and income/expense breakdowns by category and day of week.',
+        'tech': ['Python', 'Pandas', 'SQL', 'Streamlit', 'Plotly', 'Scikit-learn'],
+        'highlight': 'STATUS: LIVE · PIPELINE: Synthetic data \u2192 cleaning \u2192 SQL analysis \u2192 visualization \u2192 forecasting',
+        'live_url': 'https://end-to-end-finance-data-analysis-4qjvmptdvwcv5mcrfkydze.streamlit.app/',
+        'github_url': '',
+        'image': 'portfolio_app/images/personalfinance.jpg',
+        'has_image': True,
+        'icon': 'bi-graph-up-arrow',
+    },
 ]
 
 # In-development projects — not yet publicly deployed. Shown in a separate
