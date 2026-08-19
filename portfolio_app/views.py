@@ -5,18 +5,18 @@ from django.conf import settings
 
 # Create your views here.
 
-# Live, deployed projects — shown on the homepage and full grid on /projects/
+# Live, deployed projects — shown on the homepage (flagship=True) and full grid on /projects/
 PROJECTS = [
     {
-        'title': 'Erin the Estie',
-        'description': 'A full-stack booking platform built for a real paying client — an esthetician who needed scheduling without a subscription fee. Custom appointment system with an approval workflow, service menu management, and a mobile-optimized admin dashboard. Requirements through deployment, owned end to end.',
-        'tech': ['Django', 'PostgreSQL', 'Gmail SMTP', 'Railway'],
-        'highlight': 'STATUS: LIVE — PAYING CLIENT · ROLE: Solo build, full SDLC',
-        'live_url': 'https://www.erintheestie.com',
-        'github_url': '',  # private client repo — leave blank, template hides the button
-        'image': 'portfolio_app/images/estie.jpg',
+        'title': 'Kansas Property Tax Analysis',
+        'description': 'An end-to-end Python \u2192 SQL \u2192 Power BI pipeline answering a real civic question: is Kansas property tax growth driven by rising valuations or rising mill levy rates \u2014 and would relocating to a neighboring state actually lower the bill? Extracted and validated data from unstructured government PDFs (KDOR, Lincoln Institute) with pdfplumber, loaded it into a SQLite database with SQL views, then built an interactive Power BI dashboard with a county-level deep dive and a 5-state comparison.',
+        'tech': ['Python', 'Pandas', 'SQL', 'Power BI'],
+        'highlight': 'PIPELINE: PDF extraction \u2192 SQLite \u2192 SQL views \u2192 Power BI \u00b7 FINDING: Valuation growth, not rate hikes, is driving the tax increase',
+        'live_url': '',
+        'github_url': 'https://github.com/jemrich18/Kansas_property_tax_analysis',
+        'image': 'portfolio_app/images/kansas_tax.jpg',
         'has_image': True,
-        'icon': 'bi-calendar-check-fill',
+        'icon': 'bi-bar-chart-line-fill',
         'flagship': True,
     },
     {
@@ -32,6 +32,30 @@ PROJECTS = [
         'flagship': True,
     },
     {
+        'title': 'Personal Finance Analysis Dashboard',
+        'description': 'An end-to-end data analytics pipeline exploring 1,500 personal finance transactions across 5 years (2020\u20132024): synthetic data generation, data cleaning, SQL-based analysis in SQLite, interactive Plotly visualizations, and a 6-month linear regression forecast. Full workflow documented across 4 Jupyter notebooks covering cleaning, SQL queries, visualization, and forecasting, with dynamic KPI filtering and income/expense breakdowns by category and day of week.',
+        'tech': ['Python', 'Pandas', 'SQL', 'Streamlit', 'Plotly', 'Scikit-learn'],
+        'highlight': 'STATUS: LIVE · PIPELINE: Synthetic data \u2192 cleaning \u2192 SQL analysis \u2192 visualization \u2192 forecasting',
+        'live_url': 'https://end-to-end-finance-data-analysis-4qjvmptdvwcv5mcrfkydze.streamlit.app/',
+        'github_url': '',
+        'image': 'portfolio_app/images/personalfinance.jpg',
+        'has_image': True,
+        'icon': 'bi-graph-up-arrow',
+        'flagship': True,
+    },
+    {
+        'title': 'Erin the Estie',
+        'description': 'A full-stack booking platform built for a real paying client — an esthetician who needed scheduling without a subscription fee. Custom appointment system with an approval workflow, service menu management, and a mobile-optimized admin dashboard. Requirements through deployment, owned end to end.',
+        'tech': ['Django', 'PostgreSQL', 'Gmail SMTP', 'Railway'],
+        'highlight': 'STATUS: LIVE — PAYING CLIENT · ROLE: Solo build, full SDLC',
+        'live_url': 'https://www.erintheestie.com',
+        'github_url': '',  # private client repo — leave blank, template hides the button
+        'image': 'portfolio_app/images/estie.jpg',
+        'has_image': True,
+        'icon': 'bi-calendar-check-fill',
+        'flagship': True,
+    },
+    {
         'title': 'TrackMyHandicap',
         'description': 'A Django REST Framework API implementing the full WHS golf handicap formula from user-submitted rounds — a free alternative to a $60/year official subscription. JWT-authenticated, with a separate React/TypeScript frontend and Stripe integrated for a planned premium tier with extended trend analysis by course and weather condition.',
         'tech': ['Django REST Framework', 'React', 'TypeScript', 'Stripe'],
@@ -41,7 +65,7 @@ PROJECTS = [
         'image': 'portfolio_app/images/trackmyhandi.jpg',
         'has_image': True,
         'icon': 'bi-flag-fill',
-        'flagship': True,
+        # flagship removed — still shown on /projects/, no longer on homepage
     },
     {
         'title': 'OurCushion',
@@ -53,7 +77,7 @@ PROJECTS = [
         'image': 'portfolio_app/images/ourcushion.jpg',
         'has_image': True,
         'icon': 'bi-house-heart-fill',
-        'flagship': True,
+        # flagship removed — still shown on /projects/, no longer on homepage
     },
     {
         'title': 'GolfBros',
@@ -121,17 +145,6 @@ PROJECTS = [
         'has_image': True,
         'icon': 'bi-robot',
     },
-    {
-        'title': 'Personal Finance Analysis Dashboard',
-        'description': 'An end-to-end data analytics pipeline exploring 1,500 personal finance transactions across 5 years (2020\u20132024): synthetic data generation, data cleaning, SQL-based analysis in SQLite, interactive Plotly visualizations, and a 6-month linear regression forecast. Full workflow documented across 4 Jupyter notebooks covering cleaning, SQL queries, visualization, and forecasting, with dynamic KPI filtering and income/expense breakdowns by category and day of week.',
-        'tech': ['Python', 'Pandas', 'SQL', 'Streamlit', 'Plotly', 'Scikit-learn'],
-        'highlight': 'STATUS: LIVE · PIPELINE: Synthetic data \u2192 cleaning \u2192 SQL analysis \u2192 visualization \u2192 forecasting',
-        'live_url': 'https://end-to-end-finance-data-analysis-4qjvmptdvwcv5mcrfkydze.streamlit.app/',
-        'github_url': '',
-        'image': 'portfolio_app/images/personalfinance.jpg',
-        'has_image': True,
-        'icon': 'bi-graph-up-arrow',
-    },
 ]
 
 # In-development projects — not yet publicly deployed. Shown in a separate
@@ -139,12 +152,12 @@ PROJECTS = [
 PROJECTS_IN_PROGRESS = []
 
 SKILLS = {
-    'Backend': ['Django', 'Django REST Framework', 'Python', 'Django Channels', 'WebSockets', 'Redis', 'REST API Design'],
-    'Data & Analysis': ['Pandas', 'NumPy', 'Streamlit', 'Plotly', 'Recharts', 'Statistical Analysis', 'Data Visualization', 'Scikit-learn'],
-    'Frontend': ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
-    'Database': ['PostgreSQL', 'SQLite', 'SQL'],
-    'Tools & DevOps': ['Railway', 'Docker', 'Git', 'GitHub Actions', 'CI/CD', 'pytest', 'Jupyter Notebook'],
+    'Data & Analysis': ['Python', 'SQL', 'Pandas', 'NumPy', 'Power BI', 'Streamlit', 'Plotly', 'Recharts', 'Statistical Analysis', 'Data Visualization', 'Scikit-learn'],
+    'Database': ['PostgreSQL', 'SQLite', 'Query Optimization'],
     'AI / LLM': ['OpenAI API', 'LangGraph', 'ChromaDB', 'RAG Pipelines', 'Vector Embeddings', 'Prompt Engineering'],
+    'Backend': ['Django', 'Django REST Framework', 'Django Channels', 'WebSockets', 'Redis', 'REST API Design'],
+    'Frontend': ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
+    'Tools & DevOps': ['Railway', 'Docker', 'Git', 'GitHub Actions', 'CI/CD', 'pytest', 'Jupyter Notebook'],
 }
 
 EDUCATION = [

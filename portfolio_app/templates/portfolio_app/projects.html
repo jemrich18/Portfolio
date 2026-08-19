@@ -35,9 +35,11 @@
                             {% endfor %}
                         </div>
                         <div class="d-flex gap-2">
+                            {% if project.live_url %}
                             <a href="{{ project.live_url }}" target="_blank" class="btn btn-success">
                                 <i class="bi bi-box-arrow-up-right"></i> Live Site
                             </a>
+                            {% endif %}
                             {% if project.github_url %}
                             <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark">
                                 <i class="bi bi-github"></i> View Code
